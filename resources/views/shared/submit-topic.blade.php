@@ -1,4 +1,4 @@
-@auth
+
     <h4> Share yours ideas </h4>
     <div class="row">
         <form action="{{ route('topics.store') }}" method="post">
@@ -14,8 +14,4 @@
             </div>
         </form>
     </div>
-@endauth
 
-@guest
-    <h4><strong>Login to share your Ideas</strong></h4>
-@endguest

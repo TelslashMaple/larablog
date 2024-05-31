@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CommentController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\TopicController;
 use Illuminate\Support\Facades\Route;
@@ -24,8 +25,10 @@ Route::get('/topics/{topic}/edit', [TopicController::class, 'edit'])->name('topi
 
 Route::put('/topics/{topic}', [TopicController::class, 'update'])->name('topics.update');
 
-
 Route::delete('/topics/{topic}', [TopicController::class, 'destroy'])->name('topics.destroy');
+
+Route::post('/topics/{topic}/comments', [CommentController::class, 'store'])->name('topics.comment.store');
+
 
 
 
